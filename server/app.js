@@ -15,6 +15,8 @@ app.use('/graphql', graphqlHTTP({
  graphiql: true
 }))
 
+process.on('exit', () => { console.log('exiting…'); process.exit(); });
+
 app.listen(4000, () =>{
     console.log('Listening port 4000');
 });
